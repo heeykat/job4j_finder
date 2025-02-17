@@ -22,7 +22,7 @@ public class Visitor extends SimpleFileVisitor<Path> {
     }
 
     @Override
-    public FileVisitResult visitFile(Path file, BasicFileAttributes attributes){
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) {
         if (predicate.test(file)) {
             list.add(file.toAbsolutePath());
         }
